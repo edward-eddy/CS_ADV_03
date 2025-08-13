@@ -4,7 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            // Delegate : C# Feature
+
+            // C# Pure OOP
+
+            // Functional Programming
+            // Event-Driven Programming
+
+            // Java : Pure OOP
+            // DP: Design Patterns
         }
     }
 }
