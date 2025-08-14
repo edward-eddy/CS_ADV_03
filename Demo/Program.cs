@@ -28,7 +28,8 @@
 
         #region Delegate Ex03
 
-        public static List<T> FindElements<T>(List<T> list, ConditionFuncDelegate<T> reference)
+        //public static List<T> FindElements<T>(List<T> list, ConditionFuncDelegate<T> reference)
+        public static List<T> FindElements<T>(List<T> list, Predicate<T> reference)
         {
             List<T> Result = new List<T>();
             if (list?.Count > 0)
@@ -303,9 +304,46 @@
             //PrintList(Result); 
             #endregion
 
+            #region Built-in Delegates
+            //// Built-in Delegate
+
+            //// Predicate, Func, Action
+
+            //// ConditionFuncDelegate<int> X = ConditionsFunctions.CheckEven;
+
+            ////Predicate<int> predicate = ConditionsFunctions.CheckEven;
+
+            ////bool r = predicate.Invoke(1);
+            ////Console.WriteLine(r);
+
+            //Func<int> func1 = Fun01;
+            //Func<int, string> func2 = Fun02;
+            //// Func<>
+
+            //Func<int, bool> func = ConditionsFunctions.CheckEven;
 
 
 
+            //Action<string> action = Print;
+
+            ////action.Invoke();
+            ////action(); 
+            #endregion
+
+
+        }
+
+        public static void Print(string S)
+        {
+            Console.WriteLine("Hello");
+        }
+        public static int Fun01()
+        {
+            return 1;
+        }
+        public static string Fun02(int X)
+        {
+            return $"{X}";
         }
     }
 }
