@@ -27,9 +27,10 @@
         #endregion
 
         #region Delegate Ex03
-        public static List<int> FindElements(List<int> list, ConditionFuncDelegate reference)
+
+        public static List<T> FindElements<T>(List<T> list, ConditionFuncDelegate<T> reference)
         {
-            List<int> Result = new List<int>();
+            List<T> Result = new List<T>();
             if (list?.Count > 0)
             {
                 for (int i = 0; i < list.Count; i++)
@@ -42,6 +43,39 @@
             }
             return Result;
         }
+
+        //public static List<int> FindElements(List<int> list, ConditionFuncDelegate reference)
+        //{
+        //    List<int> Result = new List<int>();
+        //    if (list?.Count > 0)
+        //    {
+        //        for (int i = 0; i < list.Count; i++)
+        //        {
+        //            if (reference.Invoke(list[i]))
+        //            {
+        //                Result.Add(list[i]);
+        //            }
+        //        }
+        //    }
+        //    return Result;
+        //}
+        //public static List<string> FindElements(List<string> list, ConditionFuncDelegateV02 reference)
+        //{
+        //    List<string> Result = new List<string>();
+        //    if (list?.Count > 0)
+        //    {
+        //        for (int i = 0; i < list.Count; i++)
+        //        {
+        //            if (reference.Invoke(list[i]))
+        //            {
+        //                Result.Add(list[i]);
+        //            }
+        //        }
+        //    }
+        //    return Result;
+        //}
+
+        // ===============================================================================
 
         //public static List<int> FindOddNumbers(List<int> list)
         //{
@@ -258,7 +292,15 @@
             //List<int> DivisableBy3Numbers = FindElements(Numbers, ConditionsFunctions.CheckDivisableBy3);
             //List<int> DivisableBy4Numbers = FindElements(Numbers, ConditionsFunctions.CheckDivisableBy4);
 
+
             //PrintList(DivisableBy4Numbers); 
+
+
+            //List<string> Names = new List<string>() { "Ahmed", "Ali", "Maraim", "Mahmoud", "Amr", "Mona", "Khaled" };
+
+            //List<string> Result = FindElements(Names, ConditionsFunctions.CheckLengthLessThan4);
+
+            //PrintList(Result); 
             #endregion
 
 
