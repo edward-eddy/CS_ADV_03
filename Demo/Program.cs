@@ -14,6 +14,7 @@
 
     internal class Program
     {
+        #region Delegate Ex02
         public static void PrintArray<T>(T[] values)
         {
             Console.WriteLine();
@@ -23,6 +24,165 @@
             }
             Console.WriteLine();
         }
+        #endregion
+
+        #region Delegate Ex03
+        public static List<int> FindElements(List<int> list, ConditionFuncDelegate reference)
+        {
+            List<int> Result = new List<int>();
+            if (list?.Count > 0)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    if (reference.Invoke(list[i]))
+                    {
+                        Result.Add(list[i]);
+                    }
+                }
+            }
+            return Result;
+        }
+
+        //public static List<int> FindOddNumbers(List<int> list)
+        //{
+        //    List<int> Result = new List<int>();
+        //    if (list?.Count > 0)
+        //    {
+        //        for (int i = 0; i < list.Count; i++)
+        //        {
+        //            if (ConditionsFunctions.CheckOdd(list[i]))
+        //            {
+        //                Result.Add(list[i]);
+        //            }
+        //        }
+        //    }
+        //    return Result;
+        //}
+
+        //public static List<int> FindEvenNumbers(List<int> list)
+        //{
+        //    List<int> Result = new List<int>();
+        //    if (list?.Count > 0)
+        //    {
+        //        for (int i = 0; i < list.Count; i++)
+        //        {
+        //            if (ConditionsFunctions.CheckEven(list[i]))
+        //            {
+        //                Result.Add(list[i]);
+        //            }
+        //        }
+        //    }
+        //    return Result;
+        //}
+
+        //public static List<int> FindDivisibleBy3Numbers(List<int> list)
+        //{
+        //    List<int> Result = new List<int>();
+        //    if (list?.Count > 0)
+        //    {
+        //        for (int i = 0; i < list.Count; i++)
+        //        {
+        //            if (ConditionsFunctions.CheckDivisableBy3(list[i]))
+        //            {
+        //                Result.Add(list[i]);
+        //            }
+        //        }
+        //    }
+        //    return Result;
+        //}
+
+        //public static List<int> FindDivisibleBy4Numbers(List<int> list)
+        //{
+        //    List<int> Result = new List<int>();
+        //    if (list?.Count > 0)
+        //    {
+        //        for (int i = 0; i < list.Count; i++)
+        //        {
+        //            if (ConditionsFunctions.CheckDivisableBy4(list[i]))
+        //            {
+        //                Result.Add(list[i]);
+        //            }
+        //        }
+        //    }
+        //    return Result;
+        //}
+
+        //public static List<int> FindOddNumbers(List<int> list)
+        //{
+        //    List<int> Result = new List<int>();
+        //    if (list?.Count > 0)
+        //    {
+        //        for (int i = 0; i < list.Count; i++)
+        //        {
+        //            if (list[i] % 2 != 0)
+        //            {
+        //                Result.Add(list[i]);
+        //            }
+        //        }
+        //    }
+        //    return Result;
+        //}
+
+        //public static List<int> FindEvenNumbers(List<int> list)
+        //{
+        //    List<int> Result = new List<int>();
+        //    if (list?.Count > 0)
+        //    {
+        //        for (int i = 0; i < list.Count; i++)
+        //        {
+        //            if (list[i] % 2 == 0)
+        //            {
+        //                Result.Add(list[i]);
+        //            }
+        //        }
+        //    }
+        //    return Result;
+        //}
+
+        //public static List<int> FindDivisibleBy3Numbers(List<int> list)
+        //{
+        //    List<int> Result = new List<int>();
+        //    if (list?.Count > 0)
+        //    {
+        //        for (int i = 0; i < list.Count; i++)
+        //        {
+        //            if (list[i] % 3 == 0)
+        //            {
+        //                Result.Add(list[i]);
+        //            }
+        //        }
+        //    }
+        //    return Result;
+        //}
+
+        //public static List<int> FindDivisibleBy4Numbers(List<int> list)
+        //{
+        //    List<int> Result = new List<int>();
+        //    if (list?.Count > 0)
+        //    {
+        //        for (int i = 0; i < list.Count; i++)
+        //        {
+        //            if (list[i] % 4 == 0)
+        //            {
+        //                Result.Add(list[i]);
+        //            }
+        //        }
+        //    }
+        //    return Result;
+        //}
+
+        public static void PrintList<T>(List<T> values)
+        {
+            Console.WriteLine();
+            foreach (T item in values)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.WriteLine();
+        }
+        #endregion
+
+
         static void Main(string[] args)
         {
             #region Delegate Overview
@@ -56,6 +216,7 @@
             //Console.WriteLine(Count); 
             #endregion
 
+            #region Delegate Ex02
             //int[] Numbers = { 9, 8, 7, 1, 2, 3, 6, 5, 4 };
 
             //PrintArray(Numbers);
@@ -81,7 +242,24 @@
             //SortingAlgorithms.BubbleSort(Names, SortingConditions.CompareGtr);
             //SortingAlgorithms.BubbleSort(Names, SortingConditions.CompareLess);
 
-            //PrintArray(Names)
+            //PrintArray(Names) 
+            #endregion
+
+            #region Delegate Ex03
+            //List<int> Numbers = Enumerable.Range(1, 100).ToList();
+
+            ////List<int> OddNumbers = FindOddNumbers(Numbers);
+            ////List<int> EvenNumbers = FindEvenNumbers(Numbers);
+            ////List<int> DivisableBy3Numbers = FindDividableBy3Numbers(Numbers);
+            ////List<int> DivisableBy4Numbers = FindDividableBy4Numbers(Numbers);
+
+            //List<int> OddNumbers = FindElements(Numbers, ConditionsFunctions.CheckOdd);
+            //List<int> EvenNumbers = FindElements(Numbers, ConditionsFunctions.CheckEven);
+            //List<int> DivisableBy3Numbers = FindElements(Numbers, ConditionsFunctions.CheckDivisableBy3);
+            //List<int> DivisableBy4Numbers = FindElements(Numbers, ConditionsFunctions.CheckDivisableBy4);
+
+            //PrintList(DivisableBy4Numbers); 
+            #endregion
 
 
 
