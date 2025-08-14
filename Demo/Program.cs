@@ -330,7 +330,40 @@
             ////action(); 
             #endregion
 
+            #region Anonymous Method & Lambda Expression
+            ////Func<int, bool> func = ConditionsFunctions.CheckEven;
 
+            ////func(1);
+
+
+
+            //List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 9, 10 };
+
+            //// Anonymous Method
+            //// C# 2.0 2005
+
+            ////Func<int, bool> func = delegate (int X) { return X % 2 == 0; }; // Anonymous Method
+
+            //////FindElements(Numbers, func);
+            ////FindElements(Numbers, delegate (int X) { return X % 2 == 0; });
+
+
+            //// Lambda Expression [Recommended]
+            //// C# 3.0 2007
+
+            //Func<int, bool> func = X => X % 2 == 0;  // Lambda Expression
+
+            ////FindElements(Numbers, func);
+            ////FindElements(Numbers, delegate (int X) { return X % 2 == 0; });
+            //FindElements(Numbers, N => N % 2 == 0);
+            //FindElements(Numbers, N => N % 2 != 0);
+
+            //Enumerable.Where(Numbers, ConditionsFunctions.CheckOdd);
+            //Enumerable.Where(Numbers, delegate (int N) { return N % 2 != 0; });
+
+
+            //Enumerable.Where(Numbers, (N) => N % 2 != 0); // ======> 
+            #endregion
         }
 
         public static void Print(string S)
