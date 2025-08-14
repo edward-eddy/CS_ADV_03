@@ -364,6 +364,17 @@
 
             //Enumerable.Where(Numbers, (N) => N % 2 != 0); // ======> 
             #endregion
+
+            #region Var Overview
+            // C# Keyword
+            // C# 3.0
+            // var
+
+            //var X = "Hello";
+            //X = 12;
+
+            //var predicate = ConditionsFunctions.CheckDivisableBy4; 
+            #endregion
         }
 
         public static void Print(string S)
