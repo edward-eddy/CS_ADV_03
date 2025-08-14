@@ -74,6 +74,15 @@
 
             //PrintArray(Numbers);
 
+            //string[] Names = { "Ahmed", "Ali", "Maraim", "Mahmoud", "Amr", "Mona", "Khaled" };
+
+            //PrintArray(Names);
+
+            //SortingAlgorithms.BubbleSort(Names, SortingConditions.CompareGtr);
+            //SortingAlgorithms.BubbleSort(Names, SortingConditions.CompareLess);
+
+            //PrintArray(Names)
+
 
 
 
