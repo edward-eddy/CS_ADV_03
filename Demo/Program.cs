@@ -14,6 +14,15 @@
 
     internal class Program
     {
+        public static void PrintArray<T>(T[] values)
+        {
+            Console.WriteLine();
+            foreach (T item in values)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.WriteLine();
+        }
         static void Main(string[] args)
         {
             #region Delegate Overview
@@ -47,7 +56,23 @@
             //Console.WriteLine(Count); 
             #endregion
 
+            //int[] Numbers = { 9, 8, 7, 1, 2, 3, 6, 5, 4 };
 
+            //PrintArray(Numbers);
+
+            //SortingAlgorithms.BubbleSortAscending(Numbers); // Sorting Ascending
+            ////SortingAlgorithms.BubbleSortDescending(Numbers); // Sorting Descending
+
+            //SortingFuncDelegate X = SortingConditions.CompareGtr;
+            //SortingFuncDelegate X = SortingConditions.CompareLess;
+
+            //SortingAlgorithms.BubbleSort(Numbers, X); // Sorting Ascending
+            //SortingAlgorithms.BubbleSort(Numbers, SortingConditions.CompareGtr); // Sorting Ascending
+
+            //SortingAlgorithms.BubbleSort(Numbers, X); // Sorting Descending
+            //SortingAlgorithms.BubbleSort(Numbers, SortingConditions.CompareLess); // Sorting Descending
+
+            //PrintArray(Numbers);
 
 
 
